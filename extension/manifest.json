@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Em Dash Filter",
+  "version": "1.0",
+  "description": "Find em dashes in a document, smart-replace them with natural punctuation, and download a cleaned copy. Runs entirely on your computer.",
+  "action": {
+    "default_title": "Em Dash Filter"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "emdash-filter@timcase.info",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
+}

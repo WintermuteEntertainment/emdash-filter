@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Em Dash Filter</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<main>
+  <h1>Em Dash Filter <span class="dash-logo">—</span></h1>
+  <p class="tagline">Find every em dash in a document, replace each with natural punctuation,
+  and download a cleaned copy. Your file never leaves this computer.</p>
+
+  <div id="drop" tabindex="0">
+    <p><strong>Drop a file here</strong> or</p>
+    <label class="browse-btn">Choose a file<input type="file" id="fileInput"
+      accept=".txt,.md,.docx,.text,.markdown,.csv,.html,.htm" hidden></label>
+    <p class="hint">Works with .docx (Word), .txt, and .md &nbsp;·&nbsp; PDFs: save as .docx first</p>
+  </div>
+
+  <label class="option"><input type="checkbox" id="allDashes">
+    Also catch en dashes (–), minus signs (−), and double hyphens (--)</label>
+
+  <section id="results" hidden>
+    <div id="summary"></div>
+    <div class="toolbar">
+      <button id="acceptAll" class="secondary" title="Reset every dash to its smart suggestion">Use all suggestions</button>
+      <button id="keepAll" class="secondary" title="Set every dash to 'keep'">Keep all</button>
+      <button id="download" class="primary">⬇ Download cleaned copy</button>
+    </div>
+    <div id="doneNote" hidden></div>
+    <div id="list"></div>
+  </section>
+
+  <p id="error" class="error" hidden></p>
+</main>
+<script src="emdash.js"></script>
+<script src="zip.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
